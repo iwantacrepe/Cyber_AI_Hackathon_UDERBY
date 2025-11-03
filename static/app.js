@@ -48,11 +48,13 @@ document.addEventListener("DOMContentLoaded", () => {
 // 💭 2️⃣ THINKER CHAT SECTION
 // ----------------------------------------------
 const chatBox = document.getElementById("chat-box");
+const chatPlaceholder = document.getElementById("chat-placeholder");
 const sendBtn = document.getElementById("sendBtn");
 const inputEl = document.getElementById("user-input");
 let history = [];
 
 function appendMessage(role, html) {
+  if (chatPlaceholder) chatPlaceholder.style.display = "none";
   const msg = document.createElement("div");
   msg.className = "message fade-in " + (role === "user" ? "user" : "bot");
   msg.innerHTML = html;
@@ -108,6 +110,9 @@ async function sendMessage() {
   } finally {
     sendBtn.disabled = false;
   }
+}
+if (chatBox.children.length === 0 && chatPlaceholder) {
+  chatPlaceholder.style.display = "block";
 }
 
 if (sendBtn) {

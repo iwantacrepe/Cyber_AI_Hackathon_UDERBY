@@ -31,7 +31,7 @@ def find_related_cases(file_path: str, language: str = "English") -> str:
         "  - **Maneka Gandhi vs. Union of India (1978, SC)** — related for principles of personal liberty under Article 21.\n\n"
         "## 2. Landmark or Precedent Cases\n"
         "- Mention any landmark or precedent-setting cases relevant to this issue.\n\n"
-        "## 3. Summary Insight\n"
+        "## 3. Relationship to this case\n"
         "- Explain how these cases strengthen or contrast the current document’s reasoning.\n\n"
         "Rules:\n"
         "- Always output **only Markdown**, no HTML.\n"

@@ -136,8 +136,8 @@
   <div class="sidebar">
     <h2>Agents</h2>
     <ul>
-      <li data-panel="glance" class="active"> At-a-Glance</li>
-      <li data-panel="summary"> Summarizer</li>
+      <li data-panel="summary" class="active"> Summarizer</li>
+      <li data-panel="glance"> At-a-Glance</li>
       <li data-panel="jargons"> Jargons and Terms</li>
       <li data-panel="timeline"> Timeline</li>
       <li data-panel="graph"> Graph</li>
@@ -219,7 +219,7 @@
   <div class="content">
 
     <!-- 🧠 SUMMARIZER PANEL -->
-    <div id="summary" class="panel">
+    <div id="summary" class="panel active">
       <h2>Summarizer</h2>
       <div id="summary-content"
            class="markdown-box"
@@ -233,7 +233,6 @@
       </script>
     </div>
     
-
     <!-- 📘 JARGONS PANEL -->
     <div id="jargons" class="panel">
   <h2>Legal Terms and Jargons</h2>
@@ -252,8 +251,6 @@
       }
     });
     </script>
-
-    
 
     <!-- 🕒 TIMELINE PANEL -->
     <div id="timeline" class="panel">
@@ -357,7 +354,7 @@ const items = new vis.DataSet(
 
   <!-- 🧾 PRE-HEARING READINESS PANEL -->
 <div id="readiness" class="panel">
-  <h2>🧾 Pre-Hearing Readiness</h2>
+  <h2> Pre-Hearing Readiness</h2>
   <div id="readiness-content" class="markdown-box">⚙️ Preparing readiness brief...</div>
 </div>
 
@@ -377,8 +374,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 </script>
 
 <!-- ⚡ AT-A-GLANCE SUMMARY PANEL -->
-<div id="glance" class="panel active">
-  <h2>⚡ At-a-Glance Summary</h2>
+<div id="glance" class="panel">
+  <h2> At-a-Glance Summary</h2>
   <div id="glance-content" class="markdown-box">⚙️ Generating overview...</div>
 </div>
 
@@ -401,7 +398,33 @@ document.addEventListener("DOMContentLoaded", async () => {
 <!-- 💭 THINKER CHAT PANEL -->
     <div id="thinker" class="panel">
       <h2>Thinker (Chat Agent)</h2>
-      <div id="chat-box" class="chat-box"></div>
+      <div id="chat-box" class="chat-box">
+  <div id="chat-placeholder">How can I help you today?</div>
+      </div>
+     <style>
+    #chat-placeholder {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #9ca3af;
+      font-size: 18px;
+      font-style: italic;
+      text-align: center;
+      pointer-events: none;
+      opacity: 0.6;
+    }
+    .chat-box {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    height: 400px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.25);
+  }
+  </style>
+
       <div class="chat-input">
         <textarea id="user-input" placeholder="Ask anything about your case or position..."></textarea>
         <button id="sendBtn">Send</button>

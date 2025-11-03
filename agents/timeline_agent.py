@@ -34,7 +34,7 @@ def extract_timeline(file_path: str, language: str = "English") -> str:
 
     # 🧩 Enhanced system prompt with reasoning guidance
     system_prompt = (
-        f"You are 'Lexis-Timeline', a multilingual legal chronologist and investigator.\n"
+        f"You are 'Nyay-Timeline', a multilingual legal chronologist and investigator.\n"
         f"Always respond in {language}.\n\n"
         "Your task is to build a **clear, chronological timeline** of all major events, "
         "even if the document does not explicitly mention dates.\n\n"

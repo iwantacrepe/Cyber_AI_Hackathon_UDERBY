@@ -14,7 +14,7 @@ def explain_jargons(file_path: str, language: str = "English") -> str:
     uploaded_file = client.files.upload(file=file_path)
 
     system_prompt = (
-        f"You are 'Lexis-Terms', a multilingual legal term explainer.\n"
+        f"You are 'Nyay-Terms', a multilingual legal term explainer.\n"
         f"Always respond in {language}.\n\n"
         "Analyze the uploaded legal document carefully.\n"
         "Detect **complex legal or Latin words, maxims, short phrases, and procedural expressions** "

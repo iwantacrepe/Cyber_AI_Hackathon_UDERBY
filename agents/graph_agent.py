@@ -27,7 +27,7 @@ def build_graph_from_document(file_path: str, language: str = "English") -> str:
     uploaded_file = client.files.upload(file=file_path)
 
     system_prompt = (
-    f"You are 'Lexis-Graph', an investigative legal case analyst.\n"
+    f"You are 'Nyay-Graph', an investigative legal case analyst.\n"
     f"Always respond in {language}.\n\n"
     "From the uploaded document, extract key *actors* and *relationships* relevant to the story of the case.\n"
     "Focus on people (petitioners, accused, witnesses, judges, lawyers), institutions (courts, police, organizations), "
