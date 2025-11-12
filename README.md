@@ -158,8 +158,8 @@ AURA_INSTANCEID=<optional for ops/observability>
 Requirements: Python 3.11+
 
 ```bash
-git clone https://github.com/iwantacrepe/Google-GenAI-Exchange-Hackathon.git
-cd Google-GenAI-Exchange-Hackathon
+git clone https://github.com/iwantacrepe/Cyber_AI_Hackathon_UDERBY.git
+cd Project
 
 python -m venv .venv
 # Windows:
